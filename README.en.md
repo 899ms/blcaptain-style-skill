@@ -4,7 +4,7 @@
 
 ![BLCaptain Style — Still Paper / Signal Proof / Bridge Canvas](docs/hero-sample.png)
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-c8553d.svg)](LICENSE) ![Node](https://img.shields.io/badge/Node-%3E%3D20-2b2622.svg) ![Claude Code](https://img.shields.io/badge/Claude%20Code-supported-d98e3a.svg) ![Codex](https://img.shields.io/badge/Codex-supported-6b5e4d.svg)
+[![License](https://img.shields.io/badge/license-personal%20free%20%C2%B7%20commercial-c8553d.svg)](LICENSE) ![Node](https://img.shields.io/badge/Node-%3E%3D20-2b2622.svg) ![Claude Code](https://img.shields.io/badge/Claude%20Code-supported-d98e3a.svg) ![Codex](https://img.shields.io/badge/Codex-supported-6b5e4d.svg)
 
 > **Install**: tell your Claude Code / Codex — "Install this Skill: `github.com/dososo/blcaptain-style-skill`"
 
@@ -68,4 +68,4 @@ We study and learn the *productization process / fixed-layout thinking / render 
 
 ## License
 
-MIT
+**Dual-license**: free for personal & open-source use; closed-source / commercial use requires a paid commercial license. The images you generate are always yours to use commercially — only embedding the software itself in a closed/commercial product needs a license. See [LICENSE](LICENSE). Contact: blteam2026@outlook.com
