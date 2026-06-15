@@ -16,7 +16,7 @@ The point isn't "it can make a card." It's that it **rules out the vast majority
 
 ## Three visual languages
 
-Each has a one-line soul, not a recolored skin:
+Across all three: **35 layouts in active routing** (Still Paper 18 / Signal 12 / Bridge 5), 60+ renderers in the engine. Each has a one-line soul, not a recolored skin:
 
 - **Still Paper** — distill content into a warm paper note (life / essay / emotion / travel / reading). Warm paper + Song serif + cinnabar + generous whitespace.
 - **Signal Proof** — verify content into trustworthy evidence; *the interface is the evidence layer, so the reader believes the process* (tech / AI / data / work). Cream archival paper + electric blue + VERIFIED stamp.
@@ -59,7 +59,7 @@ Multi-platform: set `brief.meta.format` to `square` / `wide` to emit 1:1 / 16:9 
 Images aren't forced. The skill follows what you already have, in priority order, and records every source:
 
 1. **Your own photos / screenshots** (first choice) — Signal Proof's screenshot-evidence cards are built for real screenshots.
-2. **Free public libraries** — 12 public sources, CC0 / public-domain first, with China-accessible CC0 sources prioritized (no VPN needed).
+2. **Free public libraries** — 14+ public sources across China & overseas, CC0 / public-domain first; China-accessible CC0 sources prioritized (no VPN), with Unsplash / Pexels etc. as high-quality international supplements.
 3. **AI generation** (fallback) — only when the first two have nothing, with style constraints; inherits your agent's own image generation.
 
 The agent derives an `imageRequest` (search terms + source priority + crop / license / safe-zone rules); a cover with no image is blocked rather than faked; `image-fetch` downloads and records `source / sourceUrl / license` into `SOURCES.md`; then the signature duotone / haze treatment is applied. **Verify each image's license before commercial use — `SOURCES.md` records it for you.**
