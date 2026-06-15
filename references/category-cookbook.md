@@ -1,6 +1,6 @@
 # 内容路由手册
 
-本文件用于把用户内容路由到 Still Paper 或 Signal Proof。当前仍处于 `SP-C01 · Still Paper · Mist Field` 硬闸门；`manual:review` 仍有 `PENDING_USER_REVIEW`，所以不得进入 SL-C02。
+本文件用于把用户内容路由到 Still Paper 或 Signal Proof。当前仍处于 `SP-C01 · Still Paper · Mist Field` 硬闸门；人工视觉仍有 `PENDING_USER_REVIEW`，所以不得进入 SL-C02。
 
 技术 PASS 不等于视觉 PASS。任何路由建议都不能绕过人工视觉确认。
 
@@ -369,8 +369,8 @@ intent = emotion / story / quote
 路由完成后必须确认：
 
 ```text
-manual:review
-release:ready
+release:check
+人工视觉确认
 ```
 
 如果人工视觉仍是 `PENDING_USER_REVIEW`，不得进入下一阶段。

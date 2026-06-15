@@ -3,7 +3,7 @@
 发布质量线分成两层：
 
 - 工程健康：由 `npm run release:check` 判断。
-- 发布就绪：由 `npm run release:ready` 判断。
+- 发布就绪：由工程检查、样张渲染和维护者人工视觉确认共同判断。
 
 技术 PASS 不等于视觉 PASS。人工视觉未通过时，即使工程健康，也不得发布。
 
@@ -27,7 +27,7 @@
 
 ## 发布就绪阻塞项
 
-以下任一情况出现，`release:ready` 必须阻塞：
+以下任一情况出现，发布前必须阻塞：
 
 - 任一人工视觉项仍是 `PENDING_USER_REVIEW`。
 - 任一人工视觉项是 `FAIL_VISUAL`。
@@ -71,4 +71,4 @@ SP-FB-PROOF-01
 - 满铺图主体被标题或遮罩压住。
 - 截图不可读。
 - Still Paper 和 Signal Proof 只是同一模板换色。
-- `release:ready` 阻塞却仍打 tag。
+- 人工视觉确认未完成却仍打 tag。

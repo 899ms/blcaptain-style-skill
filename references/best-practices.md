@@ -90,4 +90,4 @@ cc0cn -> 泼辣有图 -> hippopx -> 别样网 -> Unsplash -> Pexels -> StockSnap
 
 一个视觉系统不能只靠说明成立。必须有真实渲染样张、validator、visual audit、人工视觉状态。
 
-当前 `release:check` 证明工程健康；`release:ready` 才证明发布就绪。
+当前 `release:check` 证明工程健康；发布就绪还需要样张验证和人工视觉确认。

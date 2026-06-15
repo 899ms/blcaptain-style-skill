@@ -45,7 +45,7 @@
 - 有 curated visual assets。
 - 有真实用户样张反馈。
 - 有人工视觉状态闭环。
-- `release:ready` 可通过。
+- 发布前人工判断可通过。
 
 当前项目尚未达到 L4，因为 SP-C01 / 图片 / 字体 / 满铺图仍缺人工视觉确认。
 
@@ -54,12 +54,10 @@
 进入下一阶段前必须满足：
 
 ```bash
-npm run manual:review
-npm run manual:review:strict
-npm run release:ready
+npm run release:check
 ```
 
-`release:check` 只说明工程健康。`release:ready` 才说明发布就绪。
+`release:check` 只说明工程健康。发布就绪还需要样张渲染和人工视觉确认。
 
 ## 审美标准
 

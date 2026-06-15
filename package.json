@@ -18,7 +18,6 @@
     "render.mjs",
     "validate-social-deck.mjs",
     "references/",
-    "!references/visual-direction-boards/",
     "examples/",
     "!examples/generated/",
     "!examples/agent-parallel-research/assets/**",

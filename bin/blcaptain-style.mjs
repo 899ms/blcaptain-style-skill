@@ -19,8 +19,6 @@ Usage:
   blcaptain-style providers
   blcaptain-style image-plan <brief.json> --out <IMAGE_REQUESTS.md>
   blcaptain-style image-fetch <urls.json> --out <assets-dir> [--brief <brief.json>]
-  blcaptain-style status [--status tasks/manual-review-status.json] [--json]
-  blcaptain-style review-refresh [--status tasks/manual-review-status.json] [--board tasks/manual-review-board.html] [--packet tasks/manual-review-packet.md]
   blcaptain-style audit
   blcaptain-style demo
 
@@ -29,8 +27,6 @@ Examples:
   node bin/blcaptain-style.mjs build examples/generated/planned-brief.json --out examples/generated/planned-deck
   node bin/blcaptain-style.mjs render examples/generated/planned-deck
   node bin/blcaptain-style.mjs review-report examples/generated/planned-deck
-  node bin/blcaptain-style.mjs status
-  node bin/blcaptain-style.mjs review-refresh
 `);
 }
 
@@ -175,62 +171,6 @@ async function run() {
     return;
   }
 
-
-  if (cmd === "status") {
-    const { runStatusSummary } = await import("../scripts/status-summary.mjs");
-    console.log(runStatusSummary(argAfter(args, "--status") || "tasks/manual-review-status.json", {
-      json: args.includes("--json")
-    }));
-    return;
-  }
-
-  if (cmd === "review-refresh") {
-    const statusPath = path.resolve(argAfter(args, "--status") || argAfter(args, "--file") || "tasks/manual-review-status.json");
-    const boardPath = path.resolve(argAfter(args, "--board") || "tasks/manual-review-board.html");
-    const packetPath = path.resolve(argAfter(args, "--packet") || "tasks/manual-review-packet.md");
-    const checkPaths = !args.includes("--no-paths");
-    const manifest = JSON.parse(await fs.readFile(statusPath, "utf8"));
-
-    const { generateManualReviewBoard } = await import("../scripts/manual-review-board.mjs");
-    const {
-      evaluateManualReviewBoardHtml,
-      formatManualReviewBoardGateReport
-    } = await import("../scripts/manual-review-board-gate.mjs");
-    const { generateManualReviewPacket } = await import("../scripts/manual-review-packet.mjs");
-    const {
-      evaluateManualReviewPacketMarkdown,
-      formatManualReviewPacketGateReport
-    } = await import("../scripts/manual-review-packet-gate.mjs");
-    const {
-      evaluateManualReview,
-      formatManualReviewReport
-    } = await import("../scripts/manual-review-gate.mjs");
-
-    const boardHtml = generateManualReviewBoard(manifest, { outPath: boardPath });
-    await fs.mkdir(path.dirname(boardPath), { recursive: true });
-    await fs.writeFile(boardPath, boardHtml, "utf8");
-
-    const boardGate = evaluateManualReviewBoardHtml(manifest, boardHtml, {
-      boardPath,
-      checkOutputPaths: checkPaths
-    });
-    console.log(formatManualReviewBoardGateReport(boardGate));
-    console.log("");
-
-    const packetMarkdown = generateManualReviewPacket(manifest);
-    await fs.mkdir(path.dirname(packetPath), { recursive: true });
-    await fs.writeFile(packetPath, packetMarkdown, "utf8");
-
-    const packetGate = evaluateManualReviewPacketMarkdown(manifest, packetMarkdown);
-    console.log(formatManualReviewPacketGateReport(packetGate));
-    console.log("");
-
-    const manualGate = evaluateManualReview(manifest, { checkPaths });
-    console.log(formatManualReviewReport(manualGate));
-
-    if (!boardGate.ok || !packetGate.ok || !manualGate.ok) process.exitCode = 1;
-    return;
-  }
 
   if (cmd === "build") {
     const brief = args[1];

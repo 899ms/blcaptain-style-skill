@@ -2,7 +2,7 @@
 
 本文件定义布局选择规则。当前开发阶段已切到 `Phase 0.5 — 视觉校准重启`。
 
-旧 `SP-C01 · Still Paper · Mist Field` 仍作为发布阻塞记录保留，状态从历史 `PENDING_USER_REVIEW` 转为本轮 `FAIL_VISUAL` 证据。技术 PASS 不等于视觉 PASS。`manual:review` 未通过前，不得进入 SL-C02、Core 4、Core 8 或发布。`release:ready` 是发布就绪判断。
+旧 `SP-C01 · Still Paper · Mist Field` 仍作为发布阻塞记录保留，状态从历史 `PENDING_USER_REVIEW` 转为本轮 `FAIL_VISUAL` 证据。技术 PASS 不等于视觉 PASS。人工视觉确认前，不得进入 SL-C02、Core 4、Core 8 或发布。
 
 ## 命名
 

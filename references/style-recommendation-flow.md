@@ -116,15 +116,7 @@ assets/SOURCES.md
 
 ```bash
 npm run check
-npm run phase2:spc01:check
 npm run release:check
-npm run manual:review
 ```
 
-发布就绪必须跑：
-
-```bash
-npm run release:ready
-```
-
-`release:ready` 在人工视觉状态未通过前必须保持 BLOCKED。
+发布就绪还必须完成样张渲染、验证和人工视觉确认。

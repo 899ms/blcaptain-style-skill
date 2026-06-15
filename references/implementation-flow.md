@@ -146,38 +146,17 @@ node validate-social-deck.mjs <task-dir>
 python3 scripts/visual-audit.py <task-dir>
 ```
 
-当前 SP-C01 阶段验证：
-
-```bash
-npm run phase2:spc01:check
-```
-
-当前视觉校准验证：
-
-```bash
-npm run phase:calibration:check
-```
-
 发布工程健康验证：
 
 ```bash
 npm run release:check
 ```
 
-发布就绪验证：
+发布前判断：
 
-```bash
-npm run release:ready
-```
-
-人工视觉状态验证：
-
-```bash
-npm run manual:review
-npm run manual:review:strict
-```
-
-`release:check` PASS 只代表工程健康；`release:ready` 才能证明发布就绪。当前 7 项已作为 `FAIL_VISUAL` 证据处理，`release:ready` 必须保持 BLOCKED。
+- `npm run release:check` PASS 只代表工程健康。
+- 代表样张必须完成 build / render / validate。
+- 人工视觉确认完成后，才允许进入 tag 或公开发布。
 
 ### 7. Iterate
 

@@ -73,14 +73,12 @@
 
 ```bash
 npm run gate:style-packs
-npm run manual:review
 ```
 
 进入发布判断前必须区分：
 
 ```bash
 npm run release:check
-npm run release:ready
 ```
 
-`release:check` 只代表工程健康；`release:ready` 必须等待人工视觉状态通过。
+`release:check` 只代表工程健康；发布判断必须等待人工视觉确认通过。

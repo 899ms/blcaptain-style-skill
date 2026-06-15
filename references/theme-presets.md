@@ -18,7 +18,7 @@ SL-04 Acid Lime
 
 `BC-01 Bridge Canvas` 是系统展示层，只用于 README hero、产品总览、平台覆盖说明和方法论地图，不作为日常内容卡主题。
 
-`SL-05 Signal Noir` 仍为候选主题，状态是 `candidate-needs-visual-direction-board`。在视觉方向稿、用户确认、`visual-direction-map` 激活和 gate 通过前，不得实现、不得出模板、不得进入生产样张。
+`SL-05 Signal Noir` 是暗底信号黑主题，用于戏剧化封面与暗场证据卡；暗底卡须保证截图 / 数据可读、对比充足。
 
 技术 PASS 不等于视觉 PASS。主题合同只说明可以怎么做，最终是否进入下一阶段仍取决于人工视觉确认。
 
@@ -422,7 +422,7 @@ Token：
 状态：
 
 ```text
-candidate-needs-visual-direction-board
+active
 ```
 
 潜在缺口：
@@ -436,13 +436,7 @@ candidate-needs-visual-direction-board
 - 日志分析
 - 黑盒观察
 
-未满足以下条件前不得实现：
-
-1. 生成独立视觉方向稿。
-2. 用户明确确认方向。
-3. 更新 `references/visual-direction-map.json`。
-4. 通过视觉方向 gate。
-5. 再写独立主题合同和样张。
+新增主题前：先用真实内容验证视觉方向、经人工视觉确认，再固化主题合同与样张。
 
 ## 选择规则
 

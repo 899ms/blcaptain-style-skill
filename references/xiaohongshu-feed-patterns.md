@@ -124,17 +124,15 @@
 
 ```bash
 npm run gate:style-packs
-npm run manual:review
 ```
 
 进入发布判断前必须运行：
 
 ```bash
 npm run release:check
-npm run release:ready
 ```
 
-`release:ready` 在人工视觉未确认前必须继续 BLOCKED。
+人工视觉未确认前不得发布。
 
 ## 禁止事项
 

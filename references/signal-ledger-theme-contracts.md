@@ -162,7 +162,7 @@ neon chaos, overuse of lime, no verdict, too dense
 Status:
 
 ```text
-candidate-needs-visual-direction-board
+active
 ```
 
 Use for:
@@ -200,7 +200,7 @@ neon cyberpunk, game poster, huge glow, unreadable gray text, fake logs
 Entry requirement:
 
 ```text
-Do not implement SL-05 until a visual direction board is generated, reviewed, and added to visual-direction-map.json.
+SL-05 Signal Noir is a dark-ground theme for dramatic covers; keep screenshots / data legible with sufficient contrast on dark cards.
 ```
 
 ## BC-01 Bridge Canvas

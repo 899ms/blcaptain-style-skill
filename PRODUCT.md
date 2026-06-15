@@ -1,7 +1,7 @@
 # BLCaptain Style Skill — Product
 
 > 一句话：**把一段中文内容，变成第一眼惊艳、一眼识别是「我们」的小红书 / 公众号图文卡片组。**
-> 详细资产全貌见 [`docs/ASSET-OVERVIEW.md`](docs/ASSET-OVERVIEW.md)。
+> 能力总览见 [README](README.md)，Agent 工作流见 [SKILL](SKILL.md)，视觉与主题合同见 [style-pack-catalog](references/style-pack-catalog.md)。
 
 ## 是什么 / 给谁
 

@@ -62,7 +62,7 @@ SOURCES.md
 - 截图可能不可读。
 - 满铺图对比不足。
 - 字体环境是 `WARN_ENGINEERING_PREVIEW`。
-- `release:check` PASS 但 `manual:review` 仍阻塞。
+- `release:check` PASS 但人工视觉确认仍阻塞。
 
 ## INFO
 
@@ -72,4 +72,4 @@ SOURCES.md
 
 ## 下一阶段规则
 
-`manual:review:strict` 未通过时，不得进入 SL-C02、Core 4、Core 8 或开源发布。
+人工视觉确认未通过时，不得进入 SL-C02、Core 4、Core 8 或开源发布。

@@ -168,7 +168,7 @@ export async function generateUserReviewReport(input, options = {}) {
   } else {
     lines.push("- 可以进入人工视觉审阅，但仍需用户明确给出 PASS / PASS_WITH_MINOR_TUNE / FAIL_*。");
   }
-  lines.push("- 用户明确 PASS 前，不得写 accepted proof，不得启动 Board 02 / Warm Study。");
+  lines.push("- 用户明确 PASS 前，不得写 accepted proof，不得启动后续阶段。");
   lines.push("");
 
   const markdown = lines.join("\n");
