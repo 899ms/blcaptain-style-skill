@@ -2,13 +2,6 @@
 
 本清单用于渲染前和人工视觉前的自检。它不替代维护者人工视觉确认。
 
-当前阶段仍是：
-
-```text
-SP-C01 · Still Paper · Mist Field
-PENDING_USER_REVIEW
-```
-
 技术 PASS 不等于视觉 PASS。
 
 ## 焦点

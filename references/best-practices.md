@@ -1,6 +1,6 @@
 # 最佳实践
 
-本文件记录当前项目采用的通用设计原则。它服务 Still Paper / Signal Proof，不替代具体合同和 gate。
+本文件记录当前项目采用的通用设计原则。它服务 Still Paper / Signal Proof / Bridge Canvas，不替代具体合同和 gate。
 
 技术 PASS 不等于视觉 PASS：只要内容理解、分页和版式没有锁住视觉节奏，build / render / validate 通过也会产出不能用的组图。机器 gate 只证明结构没坏，审美由人工确认。
 

@@ -2,13 +2,6 @@
 
 validator 只判断结构问题，不能替代人工审美判断。
 
-当前状态：
-
-```text
-SP-C01 · Still Paper · Mist Field
-PENDING_USER_REVIEW
-```
-
 技术 PASS 不等于视觉 PASS。
 
 ## Blocking 规则
@@ -72,4 +65,4 @@ SOURCES.md
 
 ## 下一阶段规则
 
-人工视觉确认未通过时，不得进入 SL-C02、Core 4、Core 8 或开源发布。
+人工视觉确认是最终闸门。

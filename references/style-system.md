@@ -9,7 +9,7 @@
 
 不得新增第三套主视觉系统。`BC-01 Bridge Canvas` 只是系统展示层，不能混入日常内容卡主题。`SL-05 Signal Noir` 是暗底信号黑主题，用于戏剧化封面与暗场证据卡。
 
-当前项目仍处在 `SP-C01 · Still Paper · SP-01 Mist Field` 硬闸门阶段。技术 PASS 不等于视觉 PASS；人工视觉确认没有通过前，不得进入 `SL-C02`、Core 4、Core 8 或开源发布。
+技术 PASS 不等于视觉 PASS——机器 gate 保证结构，最终由人工视觉确认。
 
 ## Still Paper
 

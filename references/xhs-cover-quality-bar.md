@@ -1,6 +1,6 @@
 # 小红书封面质量线
 
-小红书封面必须先通过缩略图阅读，再谈高级感。当前项目仍在 `SP-C01 · Still Paper · Mist Field` 阶段；这里是平台质量参考，不代表可以提前扩展 Core 4。
+小红书封面必须先通过缩略图阅读，再谈高级感。本文是平台质量参考。
 
 ## 阻塞条件
 
@@ -11,7 +11,7 @@
 - Still Paper 过度空泛，看不出内容价值。
 - Signal Proof 像企业 PPT，而不是 feed-native 证据卡。
 - 图片没有 `IMAGE_REQUESTS.md` / `SOURCES.md`。
-- 技术 PASS 不等于视觉 PASS，人工状态仍是 `PENDING_USER_REVIEW`。
+- 技术 PASS 不等于视觉 PASS，由人工视觉确认。
 
 ## 缩略图测试
 
@@ -55,4 +55,3 @@ AI / Codex / Claude Code / Agent 内容优先走 Signal Proof：
 - 命令、结果或 UI 状态尽量出现在第一张。
 - 最多 2 个 callout。
 - 不用假 3D 机器人当教程证据。
-- 未通过 SP-C01 人工视觉前，不得进入 SL-C02。

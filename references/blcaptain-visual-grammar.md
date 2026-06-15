@@ -24,7 +24,7 @@ JSON 负责把风格、主题、版式、字号、间距、图片角色和失败
 |---|---|---|
 | 能力边界 | 不是什么都做 | 只保留 Still Paper / Signal Proof；Bridge Canvas 只做系统展示层 |
 | 主题预设 | 不让 Agent 任意配色 | Still Paper 5 套，Signal Proof 4 套；不自定义 hex |
-| Layout recipe | 一个风格里能有多种版式 | 每套系统先固化 4 个真实场景 recipe，再扩 Core 8 |
+| Layout recipe | 一个风格里能有多种版式 | 每套系统按真实场景固化多种 recipe |
 | Seed template | 不从空白 HTML 拼样式 | 每个通过的 recipe 才能反推 seed，不先写通用引擎 |
 | 文案压缩 | 不把文章塞进图 | 每张只保留一个判断、一个证据、一个情绪或行动 |
 | 图片规则 | 图片不是装饰 | 声明 image role、subject map、safe text zone、source role |

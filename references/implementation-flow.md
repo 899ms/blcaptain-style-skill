@@ -1,32 +1,8 @@
 # 实施流程
 
-本文件定义 Agent 真正执行 BLCaptain Style Skill 时的生产路径。当前开发阶段已切到 `Phase 0.5 — 视觉校准重启`。
+本文件定义 Agent 真正执行 BLCaptain Style Skill 时的生产路径：从读懂内容到出图把关的固定 7 步。
 
-旧 `SP-C01 · Still Paper · Mist Field` 硬闸门仍作为发布阻塞记录保留，但不再作为当前开发推进路线。当前 7 张人工审阅图按用户反馈作为 `FAIL_VISUAL` 证据处理，不能进入发布候选。
-
-技术 PASS 不等于视觉 PASS；视觉校准没有得到用户确认前，不得进入 SL-C02、Core 4、Core 8 或开源发布。
-
-## Phase 0.5 — 视觉校准重启
-
-当前最小动作不是继续绑定 SP-C01，也不是继续生成总览板，而是先锁定一个真实使用场景，并输出真实比例成图：
-
-```text
-一个真实平台和画幅：小红书 3:4 / 公众号封面对 / README hero / 截图教程卡
-一个真实内容任务
-真实图片 / 截图 / 数据
-一张完整 PNG
-```
-
-用户只需要对真实成图做方向级反馈：
-
-```text
-有希望
-不对
-值得继续
-淘汰
-```
-
-方向不对，继续停在 Phase 0.5；方向对，才围绕这张真实图进入单张精修。
+核心原则：先锁定一个真实使用场景（平台 / 画幅 / 内容 / 图），输出真实比例成图，再迭代精修。技术 PASS 不等于视觉 PASS——机器 gate 只证明结构没坏，最终由人工视觉确认。
 
 ## 固定 7 步
 
@@ -51,38 +27,19 @@ C. 我按 Unsplash -> Pexels -> StockSnap CC0 -> Pixabay -> Kaboompics -> Flickr
 
 ### 2. Style & Theme
 
-只能在当前批准系统中选择：
+在三套视觉语言中按内容认领一套：
 
-- `Still Paper`
-- `Signal Proof`
+- `Still Paper` 静纸 —— 生活 / 随笔 / 旅行 / 读书
+- `Signal Proof` 实证 —— tech / AI / 数据 / 职场
+- `Bridge Canvas` 图桥 —— 跨平台 cinematic 封面与多画幅同源
 
-当前可选主题：
-
-- `SP-01 Mist Field`
-- `SP-02 Warm Study`
-- `SP-03 Coastal Quiet`
-- `SP-04 Night Grain`
-- `SP-05 Hearth & Table`
-- `SL-01 Electric Blue`
-- `SL-02 Graphite Mint`
-- `SL-03 Safety Coral`
-- `SL-04 Acid Lime`
-
-`SL-05 Signal Noir` 仍是候选，未补视觉方向稿、用户确认、方向 map 激活和 gate 通过前，不得实现、不得选择、不得出模板。
-
-`BC-01 Bridge Canvas` 只用于系统展示层，不用于普通内容卡。
+主题：静纸 `SP-01 Mist Field` / `SP-02 Warm Study` / `SP-03 Coastal Quiet` / `SP-04 Night Grain` / `SP-05 Hearth & Table`；实证 `SL-01 Electric Blue` / `SL-02 Graphite Mint` / `SL-03 Safety Coral` / `SL-04 Acid Lime` / `SL-05 Signal Noir`；图桥 `BC-01` cinematic split-tone。
 
 ### 3. Layout Contract Selection
 
 先选布局合同，再写或压缩文案。
 
-旧硬闸门曾只允许继续围绕：
-
-```text
-SP-C01 · Still Paper · Mist Field
-```
-
-现在先暂停旧 SP-C01 路线，进入视觉校准。Core 4 和 Core 8 仍不得提前扩展。布局选择必须能说明：
+布局选择必须能说明：
 
 - 这张卡的唯一任务
 - 标题和正文上限
@@ -162,7 +119,7 @@ npm run release:check
 
 用户给反馈后，只在当前对象内迭代：
 
-- `PASS`：记录状态，可进入下一硬闸门。
+- `PASS`：记录状态，可进入下一步。
 - `PASS_WITH_MINOR_TUNE`：只做小调优，再重新渲染和验证。
 - `FAIL_VISUAL`：停在当前视觉对象内调方向，不进入下一阶段。
 - `FAIL_ASSET`：重做图片资产和来源记录。
@@ -177,20 +134,6 @@ npm run manual:set-status -- --id <ITEM_ID> --status <STATUS> --confirmed-by-use
 ```
 
 不得手动伪造 `tasks/manual-review-status.json`。
-
-## 当前人工阻塞项
-
-以下旧发布阻塞项已作为 `FAIL_VISUAL` 证据处理；历史 `PENDING_USER_REVIEW` 语义只代表它们曾经卡在人工视觉确认：
-
-- `SP-C01 Engine Binding`
-- `Lake Girl Variant`
-- `B AI Photo`
-- `C Public Photo`
-- `SP-TYPE-BI-01`
-- `SL-TYPE-BI-01`
-- `SP-FB-PROOF-01`
-
-这些状态没有通过前，不得进入 SL-C02，不得扩 Core 4，不得宣称开源发布就绪。
 
 ## 参考边界
 

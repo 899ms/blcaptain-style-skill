@@ -2,7 +2,7 @@
 
 本层必须在布局选择之前执行。它只负责把用户任务路由到当前批准的视觉系统、主题和推荐包，不替代人工视觉确认。
 
-当前阶段仍是 `SP-C01 · Still Paper · Mist Field`。技术 PASS 不等于视觉 PASS；7 项 `PENDING_USER_REVIEW` 未确认前，不得进入 SL-C02。
+技术 PASS 不等于视觉 PASS——机器 gate 保证结构，最终由人工视觉确认。
 
 ## 1. Identify Platform
 

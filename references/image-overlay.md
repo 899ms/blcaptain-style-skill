@@ -1,12 +1,6 @@
 # 图像叠字与满铺图规则
 
-本文件用于任何文字靠近图片、压在图片上，或图片铺满卡片的场景。当前阶段只作为参考规则和 proof 约束，`SP-FB-PROOF-01` 仍是 `PENDING_USER_REVIEW`，通过前不得绑定 full-bleed 生产布局。
-
-当前硬闸门仍是：
-
-```text
-SP-C01 · Still Paper · Mist Field
-```
+本文件用于任何文字靠近图片、压在图片上，或图片铺满卡片的场景，规定参考规则与 full-bleed 安全约束。
 
 技术 PASS 不等于视觉 PASS；满铺图必须经过人工确认。
 

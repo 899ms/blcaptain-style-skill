@@ -2,14 +2,14 @@
 
 截图是证据，不是装饰。
 
-当前不得进入 SL-C02，直到 `SP-C01 · Still Paper · Mist Field` 人工视觉通过。本文只规定后续 Signal Proof 截图证据卡的处理方式。
+本文规定 Signal Proof 截图证据卡的处理方式。
 
 ## 适用系统
 
 ```text
 Signal Proof
 SL-02 Graphite Mint
-SL-C02 Screenshot Proof
+Signal Proof 截图证据卡
 ```
 
 Still Paper 可以使用截图，但只用于轻量说明，不作为当前主证据卡。
